@@ -7,7 +7,7 @@ import dataRoute from "./routes/data.js"
 
 const app=express();
 dotenv.config();
-port=process.env.PORT
+port = process.env.PORT || 8100
 
 app.use(express.json());
 app.use(cookieParser());
