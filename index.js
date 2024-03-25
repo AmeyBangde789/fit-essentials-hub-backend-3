@@ -12,7 +12,7 @@ const port=process.env.PORT
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin:'http://localhost:4200',
+    origin:'https://mean-stack-project-frontend.onrender.com',
     credentials: true
 }))
 app.use("/api",dataRoute)
