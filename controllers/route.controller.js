@@ -4,15 +4,14 @@ import addressDetails from "../models/address.js"
 export const getById = async (req, res, next) => {
     try {
         const userId = await details.find({
-            userId: { $regex: '^' + req.params.key }
-        });
+            userId: { $regex: '^' + req.params.key}
+        })
         res.json(userId)
         if (!userId)
             return next(404, "No userId found")
     } catch (error) {
         return next(500, "internal server error")
     }
-
 }
 
 export const getAddress = async (req, res, next) => {
